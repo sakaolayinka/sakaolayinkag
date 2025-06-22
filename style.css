@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+padding: 0;  
+align-self:center;
+}
+
+
+/*
+ html, body 
+{
+    height: 100%;
+
+}
+    */
+    
+
+
+
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "title  title "
+    "header  header "
+    "sidebar  sidebar "
+    "content  content "
+    "footer  footer ";
+    grid-gap:10px;
+    
+     
+    /* min-height: 100%; */
+
+}
+
+.title {
+grid-area: title;
+background-color: blueviolet;
+float:center; 
+
+}
+.header {
+    grid-area: header;
+    background-color: blueviolet;
+    
+
+
+    
+    }
+    .sidebar {
+        grid-area: sidebar;
+        background-color: aliceblue;
+        }
+        .content  {
+            grid-area: content;
+            display: grid;
+            background-color: aliceblue;
+            }
+
+            .footer {
+                grid-area: footer;
+                background-color: blueviolet;
+                
+            
+
+                }
+
+    @media screen and (min-width:736px)
+    {
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 100px  100px 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-template-areas:
+             ". title  title . "
+            " . header  header . "
+            " . sidebar  content content . "
+            " . footer  footer . ";
+            
+            
+            
+        }
+        
+    }
+
+/*
+      .content  {
+            grid-area: content;
+            width: 100%;
+            height: 500px;
+            background-color: aliceblue;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            align-content: space-around;
+            
+            overflow: auto;
+
+            padding-bottom: 100px;
+            }
+
+            .item{
+                flex-grow: 0 ;
+                flex-shrink: 1 ;
+                flex-basis:30% ;
+            }
+
+             
+            .item2 {
+                flex-grow: 0 ;
+                flex-shrink: 1 ;
+                flex-basis:30% ;
+            }
+
+
+
+
+            .footer {
+                grid-area: footer;
+                background-color: blueviolet;
+                position:relative;
+                height:00px;
+                margin-top: -100px;
+                clear: both;
+
+                }
+*/
